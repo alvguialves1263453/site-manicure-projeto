@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 42 45% 97%;
+    --foreground: 28 35% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 28 35% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 28 35% 20%;
+
+    --primary: 28 45% 45%;
+    --primary-foreground: 42 45% 97%;
+    
+    --primary-dark: 28 55% 35%;
+    --primary-light: 35 50% 75%;
+
+    --secondary: 35 35% 85%;
+    --secondary-foreground: 28 35% 20%;
+
+    --muted: 35 25% 92%;
+    --muted-foreground: 28 25% 45%;
+
+    --accent: 42 65% 60%;
+    --accent-foreground: 28 35% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 28 45% 45%;
+
+    --radius: 0.75rem;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(28 45% 45%), hsl(35 50% 55%));
+    --gradient-overlay: linear-gradient(to bottom, hsl(28 45% 45% / 0.9), hsl(28 45% 45% / 0.7));
+    
+    --shadow-elegant: 0 10px 40px -10px hsl(28 45% 35% / 0.2);
+    --shadow-hover: 0 20px 50px -15px hsl(28 45% 35% / 0.3);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    --unavailable: 0 60% 95%;
+    --unavailable-foreground: 0 70% 50%;
+    --unavailable-border: 0 60% 85%;
+  }
+
+  .dark {
+    --background: 28 35% 15%;
+    --foreground: 42 45% 97%;
+
+    --card: 28 30% 18%;
+    --card-foreground: 42 45% 97%;
+
+    --popover: 28 30% 18%;
+    --popover-foreground: 42 45% 97%;
+
+    --primary: 35 55% 55%;
+    --primary-foreground: 28 35% 15%;
+    
+    --primary-dark: 35 50% 45%;
+    --primary-light: 35 60% 70%;
+
+    --secondary: 28 25% 25%;
+    --secondary-foreground: 42 45% 97%;
+
+    --muted: 28 20% 22%;
+    --muted-foreground: 42 30% 70%;
+
+    --accent: 42 55% 50%;
+    --accent-foreground: 42 45% 97%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 42 45% 97%;
+
+    --border: 28 20% 25%;
+    --input: 28 20% 25%;
+    --ring: 35 55% 55%;
+    
+    --unavailable: 0 40% 25%;
+    --unavailable-foreground: 0 60% 70%;
+    --unavailable-border: 0 50% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
